@@ -201,4 +201,3 @@ if __name__ == "__main__":
         elif 'go offline' in query:
             speak("ok sir shutting down the system")
             quit()
-
