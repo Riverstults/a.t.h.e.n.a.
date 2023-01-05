@@ -57,11 +57,13 @@ def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
-        r.pause_threshold = 1
-        audio = r.listen(source)
+        # r.pause_threshold = 0.7
+        audio = r.listen(source, phrase_time_limit=5)
+        print (audio)
 
     try:
         print("Recognizing...")
+
         query = r.recognize_google(audio, language='en-in')
         print(f"river Said:{query}\n")
 
@@ -127,6 +129,7 @@ if __name__ == "__main__":
         elif 'how is the weather' and 'weather' in query:
 
             url = 'http://api.weatherapi.com/v1/current.json?key=9b39144eec414bbb81523812222412&q=38965&aqi=no'#Open api link here
+            key = 'c76db58769094f21bd423956222412'
 
             res = requests.get(url)
 
