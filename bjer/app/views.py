@@ -14,7 +14,7 @@ from selenium import webdriver
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 #print(voices[1].id)
-engine.setProperty('voice',voices[0].id)
+engine.setProperty('voice',voices[1].id)
 
 def speak(audio):
     engine.say(audio)
@@ -51,7 +51,7 @@ def wishMe():
     else:
         speak("Good Night sir!")
 
-    speak("Jarvis at your Service. Please tell me how can I help You ")
+    speak("athena at your Service. Please tell me how can I help You ")
 #wishMe()
 def takeCommand():
 
@@ -128,8 +128,8 @@ if __name__ == "__main__":
         
         elif 'how is the weather' and 'weather' in query:
 
-            url = 'http://api.weatherapi.com/v1/current.json?key=9b39144eec414bbb81523812222412&q=38965&aqi=no'#Open api link here
-            key = 'c76db58769094f21bd423956222412'
+            url = 'http://api.weatherstack.com/current'#Open api link here
+            access_key = 'b1c04b7b8ff04ccea5a9d06ab232b0b1'
 
             res = requests.get(url)
 
@@ -177,11 +177,6 @@ if __name__ == "__main__":
                 print(e)
                 speak("Sorry my friend . I am not able to send this email")      
 
-        # elif 'open code' in query:
-            # codePath = "C:\Users\Preston\Desktop\jarvis\hello.py"
-            # os.startfile(codePath)
-
-
         elif 'open' in query:
             os.system('explorer C://{}'.format(query.replace('Open','')))
 
@@ -198,6 +193,10 @@ if __name__ == "__main__":
 
 
 
-        elif 'go offline' in query:
+        elif 'go offline'  in query:
+            speak("ok sir shutting down the system")
+            quit()
+
+        elif 'shutdown'  in query:
             speak("ok sir shutting down the system")
             quit()
