@@ -35,7 +35,7 @@ def speak(audio):
 
 
 def takeCommand():
-
+#r is just taking what you say/ input and runs it through the the if statements and finding the one that is close or matching it 
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
@@ -95,7 +95,7 @@ def greeting():
     else:
         speak("Good Night sir!")
 
-    speak("athena at your Service. Please tell me how can I help You ")
+    speak("Athena at your Service. Please tell me how can I help You ")
 
 
 def command_input(query):
