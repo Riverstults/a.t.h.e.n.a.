@@ -1,14 +1,11 @@
 {% extends 'homeBase.html' %} {% block content %} {% load static %}
-<script src="{% static 'app/javascript/holder.js' %}" defer></script>
+<script src="{% static 'app/javascript/homescript.js' %}" defer></script>
 
 <h1>Testing Base Template:</h1>
 <h2>Home</h2>
 
 <p>Moving around with javascript</p>
 
-<label for="check">Dark Mode</label>
-<input type="checkbox" id="darkMode" name="check" />
-
-<button href="{% url 'edit' %}">edit page</button>
+<a href="{% url 'edit' %}"><button>edit page</button></a>
 
 {% endblock content %}
