@@ -94,13 +94,7 @@ def greeting ():
 
     speak("athena at your Service. Please tell me how can I help You ")
 
-
-### wtf is all of this doing in main, this should be in a function outside of main.
-def main():
-    greeting()
-    while True:
-        query = takeCommand().lower()
-
+def command_input(query):
         if "wikipedia" in query:
             speak("Searching Wikipedia...")
             query = query.replace("wikipedia", "")
@@ -189,4 +183,10 @@ def main():
             quit()
 
 
+def main():
+    greeting()
+    while True:
+        query = takeCommand().lower()
+        command_input(query)
 
+    
