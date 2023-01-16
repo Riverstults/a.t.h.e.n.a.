@@ -62,23 +62,7 @@ def sendEmail(to, content):
     server.close()
 
 
-### Please leave out code that is not being used, comments should be used for exactly that, comments.
-### If this isn't being used, delete it, if it is then uncomment it please.
-# def lighton():
-#     driver = webdriver.Chrome('C:/Users/Username/Downloads/chromedriver.exe')
-#     driver.get("https://Add here.000webhostapp.com/main.html")
-#     elem1 = driver.find_element_by_id("S1off")
-#     elem1.click()
-
-# def lightoff():
-#     driver = webdriver.Chrome('C:/Users/HACKER47/Downloads/chromedriver.exe')
-#     driver.get("https://Add here.000webhostapp.com/main.html")
-#     elem1 = driver.find_element_by_id("S1on")
-#     elem1.click()
-
-
-### can we please use more concise naming schemes, "wishMe" is in the right case but it means nothing to me, I have no clue what it even means or does.
-def wishMe():
+def greeting ():
     speak("Welcome back sir")
     hour = int(datetime.datetime.now().hour)
     print(hour)
@@ -110,13 +94,7 @@ def wishMe():
 
     speak("athena at your Service. Please tell me how can I help You ")
 
-
-### wtf is all of this doing in main, this should be in a function outside of main.
-def main():
-    wishMe()
-    while True:
-        query = takeCommand().lower()
-
+def command_input(query):
         if "wikipedia" in query:
             speak("Searching Wikipedia...")
             query = query.replace("wikipedia", "")
@@ -196,16 +174,6 @@ def main():
         elif "open" in query:
             os.system("explorer C://{}".format(query.replace("Open", "")))
 
-        # elif 'turn on lights' in query:
-        #     speak("OK,sir turning on the Lights")
-        #     lighton()
-        #     speak("Lights are on")
-
-        # elif 'turn off lights' in query:
-        #     speak("OK,sir turning off the Lights")
-        #     lightoff()
-        #     speak("Lights are off")
-
         elif "go offline" in query:
             speak("ok sir shutting down the system")
             quit()
@@ -215,6 +183,10 @@ def main():
             quit()
 
 
-### wtf do we even have a dunder name = dunder main?!?! this is not the place for this
-if __name__ == "__main__":
-    main()
+def main():
+    greeting()
+    while True:
+        query = takeCommand().lower()
+        command_input(query)
+
+    
