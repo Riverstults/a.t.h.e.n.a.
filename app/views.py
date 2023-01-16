@@ -15,7 +15,6 @@ from selenium import webdriver
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
-# print(voices[1].id)
 engine.setProperty("voice", voices[1].id)
 
 
@@ -29,8 +28,7 @@ def speak(audio):
     engine.runAndWait()
 
 
-### What is this comment trying to say??
-# wishMe()
+
 def takeCommand():
 
     r = sr.Recognizer()
