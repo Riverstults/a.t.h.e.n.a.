@@ -19,6 +19,13 @@ if (localStorage.getItem("toggle") !== null) {
 }
 
 localStorage.setItem("toggle", tog);
+
+if (localStorage.getItem("toggle") === "false") {
+  lightTheme();
+} else {
+  darkTheme();
+}
+
 console.log("localstorage('toggle') = " + localStorage.getItem("toggle"));
 
 console.log("localstorage('dark-mode') = " + localStorage.getItem("dark-mode"));
@@ -45,22 +52,3 @@ DRK_BTN.addEventListener("click", function () {
     localStorage.setItem("toggle", false);
   }
 });
-
-// DRK_BTN.addEventListener("change", function () {
-//   localStorage.setItem("dark", this.checked);
-//   if (this.checked) {
-//     darkTheme();
-//   } else {
-//     lightTheme();
-//   }
-// });
-
-// function check() {
-//   if (localStorage.getItem("dark") === "true") {
-//     console.log("dark");
-//     darkTheme();
-//   } else if (localStorage.getItem("dark") === "false") {
-//     console.log("light");
-//     lightTheme();
-//   }
-// }

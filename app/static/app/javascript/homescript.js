@@ -8,14 +8,16 @@ function lightTheme() {
   document.body.style.color = "black";
 }
 
-function check() {
-  if (localStorage.getItem("dark") === "true") {
-    console.log("dark");
-    darkTheme();
-  } else if (localStorage.getItem("dark") === "false") {
-    console.log("light");
-    lightTheme();
-  }
+if (localStorage.getItem("toggle") !== null) {
+  tog = localStorage.getItem("toggle");
+} else {
+  var tog = false;
 }
 
-check();
+localStorage.setItem("toggle", tog);
+
+if (localStorage.getItem("toggle") === "false") {
+  lightTheme();
+} else {
+  darkTheme();
+}
