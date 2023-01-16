@@ -19,6 +19,7 @@ from app.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("vis/", visPage, name="vis"),
     path("", homePage, name="home"),
-    path("edit/account", editPage, name="edit"),
+    path("edit/account/", editPage, name="edit"),
 ]
