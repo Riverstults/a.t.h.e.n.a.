@@ -38,7 +38,7 @@ def loginPage(request):
                 return redirect("home")
             else:
                 messages.info(request, "Username or Password Is Incorrect")
-                return redirect("Login")
+                return redirect("login")
 
         return render(request, "login.html")
 
@@ -57,7 +57,7 @@ def registerPage(request):
 
                 Person.objects.create(user=user, name=user.username)
 
-                return redirect("Login")
+                return redirect("login")
         context = {"form": form}
         return render(request, "register.html", context)
 
