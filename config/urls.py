@@ -19,6 +19,8 @@ from app.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", homePage, name="home"),
+    path("", loginPage, name="Login"),
+    path("register", registerPage, name="register"),
+     path("home", homePage, name="home"),
     path("edit/account", editPage, name="edit"),
 ]
