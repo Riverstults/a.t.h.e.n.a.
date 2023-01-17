@@ -1,11 +1,13 @@
 {% extends 'homeBase.html' %} {% block content %} {% load static %}
 <script src="{% static 'app/javascript/homescript.js' %}" defer></script>
 
-<h1>Testing Base Template:</h1>
-<h2>Home</h2>
+<div class="home_div">
+  <h1>Testing Base Template:</h1>
+  <h2>Home</h2>
 
-<p>Moving around with javascript</p>
+  <p>Moving around with javascript</p>
 
-<a href="{% url 'edit' %}"><button>edit page</button></a>
+  <a href="{% url 'edit' %}"><button>edit page</button></a>
+</div>
 
 {% endblock content %}

@@ -1,5 +1,6 @@
 {% extends 'homeBase.html' %} {% block content %} {% load static %}
 <script src="{% static 'app/javascript/holder.js' %}" defer></script>
+<div class="edit_div">
 
 <h1>Testing Template:</h1>
 
@@ -8,5 +9,6 @@
 <button id="darkMode" class='dark-button'/> Dark Mode </button>
 
 <a href="{% url 'home' %}"><button>home page</button></a>
+</div>
 
 {% endblock content %}

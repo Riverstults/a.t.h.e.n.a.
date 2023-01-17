@@ -39,8 +39,8 @@ function darkTheme() {
 }
 
 function lightTheme() {
-  document.body.style.background = "white";
-  document.body.style.color = "black";
+  document.body.style.background = "#ffffd0";
+  document.body.style.color = "#A555EC";
 }
 
 DRK_BTN.addEventListener("click", function () {
