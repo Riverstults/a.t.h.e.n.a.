@@ -25,4 +25,5 @@ urlpatterns = [
     path("edit/account/", editPage, name="edit"),
     path("vis/", visPage, name="vis"),
     path("logout/", logoutUser, name="logout"),
+    path("dont/worry/about/it/", dontWorry, name="aboutit"),
 ]

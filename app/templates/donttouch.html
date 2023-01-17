@@ -1,0 +1,54 @@
+{% extends 'homeBase.html' %} {% block content %} {% load static %}
+<script src="{% static 'app/javascript/dontworry.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'app/dontworry.css' %}" />
+<div class="displayBoard">
+  <h1 class="display">Display</h1>
+</div>
+<div class="flexholder">
+  <div class="flexbox">
+    <button class="seven">7</button>
+  </div>
+  <div class="flexbox">
+    <button class="eight">8</button>
+  </div>
+  <div class="flexbox">
+    <button class="nine">9</button>
+  </div>
+  <div class="flexbox">
+    <button class="times">x</button>
+  </div>
+  <div class="flexbox">
+    <button class="four">4</button>
+  </div>
+  <div class="flexbox">
+    <button class="five">5</button>
+  </div>
+  <div class="flexbox">
+    <button class="six">6</button>
+  </div>
+  <div class="flexbox">
+    <button class="sub">-</button>
+  </div>
+  <div class="flexbox">
+    <button class="one">1</button>
+  </div>
+  <div class="flexbox">
+    <button class="two">2</button>
+  </div>
+  <div class="flexbox">
+    <button class="three">3</button>
+  </div>
+  <div class="flexbox">
+    <button class="plus">+</button>
+  </div>
+  <div class="flexbox">
+    <button class="zero">0</button>
+  </div>
+  <div class="flexbox">
+    <button class="clear">clear</button>
+  </div>
+  <div class="flexbox">
+    <input type="submit" value="=" class="done" />
+  </div>
+</div>
+{% endblock content %}

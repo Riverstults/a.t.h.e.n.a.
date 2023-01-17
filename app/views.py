@@ -90,6 +90,12 @@ def visPage(request):
     return render(request, "vis.html", context)
 
 
+@login_required(login_url="login")
+def dontWorry(request):
+    context = {}
+    return render(request, "donttouch.html", context)
+
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
