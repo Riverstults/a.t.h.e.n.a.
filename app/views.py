@@ -8,7 +8,7 @@ import os
 import smtplib
 import requests
 from selenium import webdriver
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
 from django.contrib import messages
@@ -23,77 +23,80 @@ from django.http import JsonResponse
 
 ### all comments with the triple hashtags are me, Eric.
 
+
 def loginPage(request):
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect("home")
     else:
-        if request.method == 'POST':
-                    username = request.POST.get('username')
-                    password = request.POST.get('password')
-                    user = authenticate(request, username=username,password=password)
+        if request.method == "POST":
+            username = request.POST.get("username")
+            password = request.POST.get("password")
+            user = authenticate(request, username=username, password=password)
 
-                    if user is not None:
-                        login(request, user)
-                        return redirect('home')
-                    else:
-                        messages.info(request, 'Username or Password Is Incorrect')
-                        return redirect('Login')
+            if user is not None:
+                login(request, user)
+                return redirect("home")
+            else:
+                messages.info(request, "Username or Password Is Incorrect")
+                return redirect("Login")
 
-        return render(request,'login.html')
+        return render(request, "login.html")
+
 
 def registerPage(request):
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect("home")
     else:
         form = CreateUserForm()
-        if request.method == 'POST':
+        if request.method == "POST":
             form = CreateUserForm(request.POST)
             if form.is_valid():
                 user = form.save()
-                username = form.cleaned_data.get('username')
-                messages.success(request, 'Account was created for ' + username)
+                username = form.cleaned_data.get("username")
+                messages.success(request, "Account was created for " + username)
 
-                Person.objects.create(
-				user = user,
-                name = user.username
-			)
-                
-                return redirect('Login')
-        context = {'form':form}
-        return render(request,'register.html',context)
+                Person.objects.create(user=user, name=user.username)
+
+                return redirect("Login")
+        context = {"form": form}
+        return render(request, "register.html", context)
 
 
 def logoutUser(request):
     logout(request)
-    return redirect('Login')
+    return redirect("Login")
+
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
 engine.setProperty("voice", voices[1].id)
 
 
+@login_required(login_url="login")
 def homePage(request):
     context = {}
     return render(request, "homePage.html", context)
 
 
+@login_required(login_url="login")
 def editPage(request):
     context = {}
     return render(request, "editPage.html", context)
+
+
+@login_required(login_url="login")
+def visPage(request):
+    context = {}
+    return render(request, "vis.html", context)
 
 
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
-def visPage(request):
-    context = {}
-    return render(request,"vis.html", context)
-
-
 
 def takeCommand():
-#r is just taking what you say/ input and runs it through the the if statements and finding the one that is close or matching it 
+    # r is just taking what you say/ input and runs it through the the if statements and finding the one that is close or matching it
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
@@ -248,4 +251,3 @@ def main():
     while True:
         query = takeCommand().lower()
         command_input(query)
-
