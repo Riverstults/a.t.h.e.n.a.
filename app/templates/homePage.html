@@ -7,8 +7,10 @@
 
   <p>Moving around with javascript</p>
 
-  <a  class = "safe"href="{% url 'edit' %}"><button>edit page</button></a>
-  <a class= "sir" href="{% url 'logout' %}"><button>logout</button></a>
+  {% comment %} <a  class = "safe" href="{% url 'edit' %}"><button class = "safe">edit page</button></a>
+  <a class= "sir" href="{% url 'logout' %}"><button>logout</button></a> {% endcomment %}
 </div>
+<a  class = "safe" href="{% url 'edit' %}"><button >edit page</button></a>
+<a class= "sir" href="{% url 'logout' %}"><button class = nom >logout</button></a>
 
 {% endblock content %}
