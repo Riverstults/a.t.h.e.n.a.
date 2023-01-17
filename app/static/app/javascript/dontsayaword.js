@@ -82,6 +82,22 @@ function speakThis(message) {
         const finalText = "Opening instagram";
         speech.text = finalText;
     }
+    else if(message.includes('open youtube')) {
+        window.open("https://www.youtube.com/", "_blank");
+        const finalText = "Opening youtube";
+        speech.text = finalText;
+    }
+    else if(message.includes('check the stock market')) {
+        window.open("https://finance.yahoo.com/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAE7HRO3uiKVa6_9MJCXjVBImCEi9FEZDZU1OE7GdDB5nA7gVgzVCK3jT45alih61Z4MgoF6lxmtPUP8qCpFzSHZ4kMXRO-aBFNX9boD7zGOYb9Sps21DNA7tdE1YdPYyLoIgs7Im1wUuycXMGxZwTBzQdvDySR1_WxQISKP6z86l", "_blank");
+        const finalText = "opening the stock market";
+        speech.text = finalText;
+    }
+    
+    else if(message.includes('check the news')) {
+        window.open("https://news.google.com/home?hl=en-US&gl=US&ceid=US:en", "_blank");
+        const finalText = "Opening the news";
+        speech.text = finalText;
+    }
 
     else if(message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
@@ -112,6 +128,7 @@ function speakThis(message) {
         const finalText = "Opening Calculator";
         speech.text = finalText;
     }
+ 
 
     else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
