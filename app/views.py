@@ -86,6 +86,10 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
+def visPage(request):
+    context = {}
+    return render(request,"vis.html", context)
+
 
 
 def takeCommand():
@@ -244,3 +248,4 @@ def main():
     while True:
         query = takeCommand().lower()
         command_input(query)
+

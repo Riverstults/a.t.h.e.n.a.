@@ -19,6 +19,13 @@ if (localStorage.getItem("toggle") !== null) {
 }
 
 localStorage.setItem("toggle", tog);
+
+if (localStorage.getItem("toggle") === "false") {
+  lightTheme();
+} else {
+  darkTheme();
+}
+
 console.log("localstorage('toggle') = " + localStorage.getItem("toggle"));
 
 console.log("localstorage('dark-mode') = " + localStorage.getItem("dark-mode"));
@@ -27,13 +34,19 @@ console.log("DRK_BTN:");
 console.log(DRK_BTN);
 
 function darkTheme() {
-  document.body.style.background = "#1f1a24";
+  var box = document.querySelector(".box");
+  console.log(box);
+  document.body.style.background = "#121212";
   document.body.style.color = "#bb86fc";
+  box.style.background = "#1f1a24";
 }
 
 function lightTheme() {
-  document.body.style.background = "white";
-  document.body.style.color = "black";
+  var box = document.querySelector(".box");
+  console.log(box);
+  document.body.style.background = "#ffffd0";
+  document.body.style.color = "#A555EC";
+  box.style.background = "#eaeac7";
 }
 
 DRK_BTN.addEventListener("click", function () {
@@ -45,22 +58,3 @@ DRK_BTN.addEventListener("click", function () {
     localStorage.setItem("toggle", false);
   }
 });
-
-// DRK_BTN.addEventListener("change", function () {
-//   localStorage.setItem("dark", this.checked);
-//   if (this.checked) {
-//     darkTheme();
-//   } else {
-//     lightTheme();
-//   }
-// });
-
-// function check() {
-//   if (localStorage.getItem("dark") === "true") {
-//     console.log("dark");
-//     darkTheme();
-//   } else if (localStorage.getItem("dark") === "false") {
-//     console.log("light");
-//     lightTheme();
-//   }
-// }
