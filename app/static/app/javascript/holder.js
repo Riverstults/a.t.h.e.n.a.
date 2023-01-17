@@ -34,13 +34,19 @@ console.log("DRK_BTN:");
 console.log(DRK_BTN);
 
 function darkTheme() {
-  document.body.style.background = "#1f1a24";
+  var box = document.querySelector(".box");
+  console.log(box);
+  document.body.style.background = "#121212";
   document.body.style.color = "#bb86fc";
+  box.style.background = "#1f1a24";
 }
 
 function lightTheme() {
+  var box = document.querySelector(".box");
+  console.log(box);
   document.body.style.background = "#ffffd0";
   document.body.style.color = "#A555EC";
+  box.style.background = "#eaeac7";
 }
 
 DRK_BTN.addEventListener("click", function () {

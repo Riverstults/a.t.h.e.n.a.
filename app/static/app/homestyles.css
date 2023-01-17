@@ -7,10 +7,16 @@ body {
 body {
   background: #ffffd0;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
   background: #eaeac7;
-  width: 40%;
-  height: 40%;
+  width: 85%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
