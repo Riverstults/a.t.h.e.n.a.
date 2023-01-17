@@ -1,16 +1,19 @@
 {% extends 'homeBase.html' %} {% block content %} {% load static %}
 <script src="{% static 'app/javascript/homescript.js' %}" defer></script>
-
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'app/rivs.css' %}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <div class="home_div">
-  <h1>Testing Base Template:</h1>
-  <h2>Home</h2>
-
-  <p>Moving around with javascript</p>
-
-  {% comment %} <a  class = "safe" href="{% url 'edit' %}"><button class = "safe">edit page</button></a>
-  <a class= "sir" href="{% url 'logout' %}"><button>logout</button></a> {% endcomment %}
+    <h1 class= "dean">A.T.H.E.N.A.</h1>
+    <p class = "sam">I'm a Virtual Assistant how can i help you</p>
+</div>
+<div class="input">
+    <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+    <h1 class="content"> Click here to speak</h1>
+</div>
 </div>
 <a  class = "safe" href="{% url 'edit' %}"><button >edit page</button></a>
 <a class= "sir" href="{% url 'logout' %}"><button class = nom >logout</button></a>
-
+<script src={% static 'app/javascript/dontsayaword.js' %}></script>
 {% endblock content %}
