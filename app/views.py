@@ -64,7 +64,7 @@ def registerPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect("Login")
+    return redirect("login")
 
 
 engine = pyttsx3.init("sapi5")
