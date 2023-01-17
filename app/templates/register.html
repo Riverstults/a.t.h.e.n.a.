@@ -1,16 +1,8 @@
-{% load static%}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'homeBase.html' %} {% block content %}{% load static%}
+<script src="{% static 'app/javascript/homescript.js' %}" defer></script>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type = "text/css" href="{% static 'app/login.css'%}">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Space Grotesk">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Barlow">
-    <title>Document</title>
 </head>
 <body class = "login-page">
     <div class = "title-placement">
@@ -28,7 +20,6 @@
             {% csrf_token %}
             <div class = "first-in">
                 <h4 class = "regi-username">What would you like to be called? {{form.username}}</h4>
-                
             
                 <h4 class = "regi-password">Choose a secure password:{{form.password1}}</h4>
 
@@ -43,6 +34,6 @@
          </div>
     </div>
     
-
+{% endblock content %}
 </body>
 </html>

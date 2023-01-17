@@ -1,206 +1,209 @@
-body{
-    margin: none;
-    padding: none;
+body {
+  margin: none;
+  padding: none;
 }
-.login-page{
-    height: 1000px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-color: #FFFFD0;
+.login-page {
+  height: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: #ffffd0;
 }
-.title-placement{
-    grid-row: 2/3;
-    align-self: center;
-    justify-self: center;
-}
-
-.title-1{
-    font-size: 90px;
-    font-family: 'Space Grotesk', serif;
-    
-    align-self: center;
-    justify-self: end;
-    color: #A555EC;
-    text-transform: uppercase;
-    display:inline;
-    margin-left: 40px;
-}
-.title-2{
-    font-size: 90px;
-    font-family: 'Space Grotesk', serif;
-    
-    align-self: center;
-    justify-self: center;
-    color: #A555EC;
-    text-transform: uppercase;
-    display:inline;
-    margin-left: 40px;
-}
-.title-3{
-    font-size: 90px;
-    font-family: 'Space Grotesk', serif;
-    
-    align-self: center;
-    justify-self: center;
-    color: #A555EC;
-    text-transform: uppercase;
-    display:inline;
-    margin-left: 40px;
-}
-.title-4{
-    font-size: 90px;
-    font-family: 'Space Grotesk', serif;
-    
-    align-self: center;
-    justify-self: center;
-    color: #A555EC;
-    text-transform: uppercase;
-    display:inline;
-    margin-left: 40px;
+.title-placement {
+  grid-row: 2/3;
+  align-self: center;
+  justify-self: center;
 }
 
-.desc-placement{
-    font-size: 30px;
-    font-family: 'Barlow', serif;
-    grid-row: 3/4;
+.title-1 {
+  font-size: 90px;
+  font-family: "Space Grotesk", serif;
 
-    align-self: center;
-    justify-self: center;
+  align-self: center;
+  justify-self: end;
+  color: #a555ec;
+  text-transform: uppercase;
+  display: inline;
+  margin-left: 40px;
+}
+.title-2 {
+  font-size: 90px;
+  font-family: "Space Grotesk", serif;
+
+  align-self: center;
+  justify-self: center;
+  color: #a555ec;
+  text-transform: uppercase;
+  display: inline;
+  margin-left: 40px;
+}
+.title-3 {
+  font-size: 90px;
+  font-family: "Space Grotesk", serif;
+
+  align-self: center;
+  justify-self: center;
+  color: #a555ec;
+  text-transform: uppercase;
+  display: inline;
+  margin-left: 40px;
+}
+.title-4 {
+  font-size: 90px;
+  font-family: "Space Grotesk", serif;
+
+  align-self: center;
+  justify-self: center;
+  color: #a555ec;
+  text-transform: uppercase;
+  display: inline;
+  margin-left: 40px;
 }
 
-.desc-1{
-    font-size: 30px;
-    font-family: 'Barlow', serif;
-    align-self: center;
-    justify-self: center;
-    display:inline;
-    margin-left: 10px;
-    color: #D09CFA;
+.desc-placement {
+  font-size: 30px;
+  font-family: "Barlow", serif;
+  grid-row: 3/4;
+
+  align-self: center;
+  justify-self: center;
 }
-.desc-2{
-    font-size: 30px;
-    font-family: 'Space Grotesk', serif;
-    color: #D09CFA;
-    align-self: center;
-    justify-self: center;
-    display:inline;
-    margin-left: 10px;
-    text-transform: uppercase;
+
+.desc-1 {
+  font-size: 30px;
+  font-family: "Barlow", serif;
+  align-self: center;
+  justify-self: center;
+  display: inline;
+  margin-left: 10px;
+  color: #d09cfa;
 }
-.desc-3{
-    font-size: 30px;
-    font-family: 'Barlow', serif;
-    color: #D09CFA;
-    align-self: center;
-    justify-self: center;
-    display:inline;
-    margin-left: 10px;
+.desc-2 {
+  font-size: 30px;
+  font-family: "Space Grotesk", serif;
+  color: #d09cfa;
+  align-self: center;
+  justify-self: center;
+  display: inline;
+  margin-left: 10px;
+  text-transform: uppercase;
 }
-.desc-4{
-    font-size: 30px;
-    font-family: 'Barlow', serif;
-    color: #D09CFA;
-    align-self: center;
-    justify-self: center;
-    display:inline;
-    margin-left: 10px;
+.desc-3 {
+  font-size: 30px;
+  font-family: "Barlow", serif;
+  color: #d09cfa;
+  align-self: center;
+  justify-self: center;
+  display: inline;
+  margin-left: 10px;
 }
-.go-mid{
-    grid-row: 4/7;
-    align-self: center;
-    justify-self: center;
-    margin-bottom: 80px;
+.desc-4 {
+  font-size: 30px;
+  font-family: "Barlow", serif;
+  color: #d09cfa;
+  align-self: center;
+  justify-self: center;
+  display: inline;
+  margin-left: 10px;
 }
-.form-login-d{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: 500px;
+.go-mid {
+  grid-row: 4/7;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 80px;
 }
-.user-name-place{
-    grid-row: 1/2;
-    margin-bottom: 20px;
-    width: 70%;
-    align-self: center;
-    justify-self: center;
-    height: 50px;
-    transition: width 0.4s ease-in-out;
-    background-color: black;
-    color: #D09CFA;
-    border-radius: 14px;
-    border: none;
-    font-size: larger;
+.form-login-d {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 500px;
 }
-.password-place{
-    grid-row: 2/3;
-    margin-bottom: 20px;
-    width: 70%;
-    align-self: center;
-    justify-self: center;
-    height: 50px;
-    transition: width 0.4s ease-in-out;
-    background-color: black;
-    color: #D09CFA;
-    border-radius: 14px;
-    border: none;
-    font-size: larger;
+.user-name-place {
+  grid-row: 1/2;
+  margin-bottom: 20px;
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+  height: 50px;
+  transition: width 0.4s ease-in-out;
+  background-color: black;
+  color: #d09cfa;
+  border-radius: 14px;
+  border: none;
+  font-size: larger;
 }
-.enter-place{
-    grid-row: 3/4;
-    margin-bottom: 20px;
-    width: 71.5%;
-    align-self: center;
-    justify-self: center;
-    height: 50px;
-    transition: width 0.4s ease-in-out;
-    background-color: black;
-    color: #D09CFA;
-    border-radius: 14px;
-    border: none;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    font-size: larger;
+.password-place {
+  grid-row: 2/3;
+  margin-bottom: 20px;
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+  height: 50px;
+  transition: width 0.4s ease-in-out;
+  background-color: black;
+  color: #d09cfa;
+  border-radius: 14px;
+  border: none;
+  font-size: larger;
 }
-.enter-place:hover{
-    color: #A555EC;
-    border: 1px solid #A555EC;
+.enter-place {
+  grid-row: 3/4;
+  margin-bottom: 20px;
+  width: 71.5%;
+  align-self: center;
+  justify-self: center;
+  height: 50px;
+  transition: width 0.4s ease-in-out;
+  background-color: black;
+  color: #d09cfa;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  font-size: larger;
+}
+.enter-place:hover {
+  color: #a555ec;
+  border: 1px solid #a555ec;
 }
 .user-name-place:focus {
-    width: 100%;
+  width: 100%;
 }
 .password-place:focus {
-    width: 100%;
+  width: 100%;
 }
-.sign-place{
-    grid-row: 4/5;
-    align-self: center;
-    justify-self: center;
-    font-family: 'Barlow', serif;
-    color: #D09CFA;
-    font-size: larger;
-    margin-top: 20px;
+.sign-place {
+  grid-row: 4/5;
+  align-self: center;
+  justify-self: center;
+  font-family: "Barlow", serif;
+  color: #d09cfa;
+  font-size: larger;
+  margin-top: 20px;
 }
-.sign-link{
-    align-self: center;
-    justify-self: center;
-    font-family: 'Barlow', serif;
-    color: #A555EC;
-    text-decoration: none;
+.sign-link {
+  align-self: center;
+  justify-self: center;
+  font-family: "Barlow", serif;
+  color: #a555ec;
+  text-decoration: none;
 }
-.alert{
-    font-family: 'Barlow', serif;
-    align-self: center;
-    justify-self: center;
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border: 2px solid #A555EC;
+.alert {
+  font-family: "Barlow", serif;
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 2px solid #a555ec;
 }
-.first-in{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: 500px; 
-    align-self: center;
-    justify-self: center; 
-    border: 2px solid #A555EC;
-    padding: 20px;
+.first-in {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 500px;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid #a555ec;
+  padding: 20px;
+}
+
+.box {
+  flex-direction: column;
 }
