@@ -76,7 +76,21 @@ function speakThis(message) {
         const finalText = "Opening Google";
         speech.text = finalText;
     }
-
+    else if(message.includes('open spotify')) {
+        window.open("https://open.spotify.com/?", "_blank");
+        const finalText = "Opening spotify";
+        speech.text = finalText;
+    }
+    else if(message.includes('open facebook')) {
+        window.open("https://www.facebook.com/", "_blank");
+        const finalText = "Opening spotify";
+        speech.text = finalText;
+    }
+    else if(message.includes('open tiktok')) {
+        window.open("https://www.tiktok.com/foryou?lang=en", "_blank");
+        const finalText = "Opening tiktok";
+        speech.text = finalText;
+    }
     else if(message.includes('open instagram')) {
         window.open("https://instagram.com", "_blank");
         const finalText = "Opening instagram";
